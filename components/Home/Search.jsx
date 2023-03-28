@@ -1,5 +1,7 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
+import styles from "../../app/page.module.css";
 
 export default function Search() {
   const initState = {
@@ -24,38 +26,53 @@ export default function Search() {
   };
 
   return (
-    <div className="bg-hero-pattern bg-repeat-round bg-cover border-4 w-full h-[26rem] flex items-center justify-center pt-8">
-      <div className="flex flex-row divide-x-2 flex-wrap">
-        <input
-          className="placeholder-gray-700 capitalize focus:placeholder-gray-500 placeholder:pl-3 h-[46px] w-[244px] font-semibold pl-3 text-slate-800  "
-          placeholder="Enter your source"
-          type="text"
-          name="source"
-          onChange={handlechange}
-        />
+    <div className={styles.mainslider}>
+      <div className="bg-hero-pattern bg-repeat-round bg-cover border-4 w-full h-[26rem] flex items-center justify-center pt-8 relative">
+        <div className="flex flex-row divide-x-2 flex-wrap">
+          <input
+            className="placeholder-gray-500 capitalize focus:placeholder-gray-500 placeholder:pl-2 h-[46px] w-[244px] font-semibold pl-2 text-color:white  "
+            placeholder="Enter your source"
+            type="text"
+            name="source"
+            onChange={handlechange}
+          />
 
-        <input
-          className="placeholder-gray-700 capitalize focus:placeholder-gray-500 placeholder:pl-3 h-[46px] w-[244px] font-semibold pl-3 text-slate-800"
-          placeholder="Enter your destination"
-          type="text"
-          name="destination"
-          onChange={handlechange}
-        />
+          <input
+            className="placeholder-gray-500 capitalize focus:placeholder-gray-500 placeholder:pl-2 h-[46px] w-[244px] font-semibold pl-2 text-color:white"
+            placeholder="Enter your destination"
+            type="text"
+            name="destination"
+            onChange={handlechange}
+          />
 
-        <input
-          className="h-[46px] w-[244px]  pl-3 pr-3"
-          type="date"
-          name="date"
-          onChange={handlechange}
-        />
+          <input
+            className="h-[46px] w-[244px]  pl-3 pr-3"
+            type="date"
+            name="date"
+            onChange={handlechange}
+          />
 
-        <button
-          onClick={handleclicked}
-          onKeyDown={handleKeyDown}
-          className="h-[46px] w-[144px] bg-red-500 text-white font-bold"
-        >
-          Search
-        </button>
+          <button
+            onClick={handleclicked}
+            onKeyDown={handleKeyDown}
+            className="h-[46px] w-[144px] bg-red-500 text-white font-bold"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <div className={styles.offer}>
+        <Image
+          src="/first.png"
+          width={100}
+          height={80}
+          alt="first offer"
+          priority
+        />
+        <div>
+          <h4>SAVE UPTO RS 250* ON YOUR BUS TICKETS.</h4>
+          <p>Book your favourite seat now.</p>
+        </div>
       </div>
     </div>
   );
