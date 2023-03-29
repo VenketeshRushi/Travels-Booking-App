@@ -23,7 +23,7 @@ export default function Infocard() {
   ];
   return (
     <>
-      <div className="mt-6 mb-8 w-2xl lg:w-3/6 w-2xl m-auto flex flex-row gap-6 flex-wrap items-center justify-evenly">
+      <div className="mt-6 mb-8 w-2xl lg:w-3/6 m-auto flex flex-row gap-6 flex-wrap items-center justify-evenly">
         <article className="flex max-w-xl rounded bg-white flex-col items-center justify-between shadow-3xl p-5 px-10 transform  hover:scale-110 transition duration-200">
           <h3 className="mt-3 mb-3 text-xs text-center text-gray-900 ">
             Save upto Rs 300 on Ap and TS route

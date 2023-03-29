@@ -20,7 +20,7 @@
   z-index: 1;
   background-color: white;
 }
-.offer>div>h4{
+.offer > div > h4 {
   font-weight: 500;
   text-transform: uppercase;
   color: #4a4a4a;
@@ -29,6 +29,36 @@
   font-size: small;
   color: #737373;
   padding-top: 4px;
+}
+
+@media all and (min-width: 319px) and (max-width: 767px) {
+  .offer {
+    width: 90%;
+    margin-top: -25px;
+  }
+  .mainslider {
+    justify-content: space-between;
+  }
+  .offer > div {
+    margin-left: 20px;
+  }
+  .mainslider > div:nth-child(1) {
+    height: 350px;
+    background-image: url("../public/5.jpg");
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 900px) {
+  .offer {
+    width: 60%;
+    margin-top: -25px;
+  }
+  .mainslider {
+    justify-content: space-between;
+  }
+  .offer > div {
+    margin-left: 20px;
+  }
 }
 
 /* .main {
