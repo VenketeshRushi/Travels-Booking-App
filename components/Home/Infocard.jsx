@@ -59,7 +59,7 @@ export default function Infocard() {
           </h3>
         </article>
       </div>
-      <div className="w-full bg-orange-100 pt-5 pb-5">
+      <div className="w-full bg-amber-50 pt-5 pb-8">
         <div className=" mx-auto w-full lg:mx-0 flex flex-col items-center">
           <div>
             <Image
@@ -142,9 +142,62 @@ export default function Infocard() {
           </div>
         </div>
       </div>
-      <div className="bg-white py-4">
+      <section className="mb-12 mt-8 text-gray-800 border-b-2 border-gray-300 text-center">
+        <h2 className="text-3xl text-gray-700 mb-10">AWARDS & RECOGNITION</h2>
+        <div className="grid gap-x-6 lg:gap-x-12 md:grid-cols-3">
+          <div className="mb-24 md:mb-0">
+            <div className="rounded-lg h-full block bg-white">
+              <div className="flex justify-center">
+                <div className="flex justify-center">
+                  <Image
+                    src="/Business_Standard1.png"
+                    className="mx-auto"
+                    alt="Business_Standard1"
+                    width={250}
+                    height={200}
+                  />
+                </div>
+              </div>
+              <h5 className="text-lg mt-0 mb-4">Most Innovaive Company</h5>
+            </div>
+          </div>
+          <div className="mb-24 md:mb-0">
+            <div className="rounded-lg h-full block bg-white">
+              <div className="flex justify-center">
+                <div className="flex justify-center">
+                  <Image
+                    src="/Brand_Trust_Report.png"
+                    className="mx-auto"
+                    alt="Brand_Trust_Report"
+                    width={250}
+                    height={200}
+                  />
+                </div>
+              </div>
+              <h5 className="text-lg mt-8 mb-4">Most Trusted Brand</h5>
+            </div>
+          </div>
+          <div className="mb-24 md:mb-0">
+            <div className="rounded-lg h-full block bg-white">
+              <div className="flex justify-center">
+                <div className="flex justify-center">
+                  <Image
+                    src="/Eye_for_Travel1.png"
+                    className="mx-auto"
+                    alt="Eye_for_Travel1"
+                    width={250}
+                    height={200}
+                  />
+                </div>
+              </div>
+              <h5 className="text-lg mt-9 mb-4">Mobile Innovation Award</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="bg-white border-b-2 pb-14 border-gray-300">
         <h2 className="mt-3 mb-10 text-2xl text-center font-semibold tracking-tight text-gray-600 sm:text-3xl">
-        THE NUMBERS ARE GROWING!
+          THE NUMBERS ARE GROWING!
         </h2>
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <dl className="grid grid-cols-1 gap-y-16 gap-x-8 text-center lg:grid-cols-3">
@@ -170,6 +223,82 @@ export default function Infocard() {
           </dl>
         </div>
       </div>
+      <footer className="bg-amber-50 pt-6 pb-6 text-center text-gray-700">
+        <div className="container p-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4">
+            <div className="mb-6">
+              <h5 className="mb-2.5 font-bold uppercase ">Top Bus Routes</h5>
+              <ul className="mb-0 list-none">
+                <li>
+                  <p>Hyderabad to Bangalore Bus</p>
+                </li>
+                <li>
+                  <p>Bangalore to Chennai Bus</p>
+                </li>
+                <li>
+                  <p>Pune to Bangalore Bus</p>
+                </li>
+                <li>
+                  <p>Mumbai to Bangalore Bus</p>
+                </li>
+              </ul>
+            </div>
+            <div className="mb-6">
+              <h5 className="mb-2.5 font-bold uppercase ">Top Cities</h5>
+              <ul className="mb-0 list-none">
+                <li>
+                  <p>Hyderabad Bus Tickets</p>
+                </li>
+                <li>
+                  <p>Bangalore Bus Tickets</p>
+                </li>
+                <li>
+                  <p>Chennai Bus Tickets</p>
+                </li>
+                <li>
+                  <p>Pune Bus Tickets</p>
+                </li>
+              </ul>
+            </div>
+            <div className="mb-6">
+              <h5 className="mb-2.5 font-bold uppercase ">Other</h5>
+              <ul className="mb-0 list-none">
+                <li>
+                  <p>TSRTC</p>
+                </li>
+                <li>
+                  <p>SBSTC</p>
+                </li>
+                <li>
+                  <p>RSRTC</p>
+                </li>
+                <li>
+                  <p>KeralaRTC</p>
+                </li>
+              </ul>
+            </div>
+            <div className="mb-6">
+              <h5 className="mb-2.5 font-bold uppercase ">
+                Tempo Traveller in Cities
+              </h5>
+              <ul className="mb-0 list-none">
+                <li>
+                  <p>Tempo traveller in Bangalore</p>
+                </li>
+                <li>
+                  <p>Tempo traveller in Chennai</p>
+                </li>
+                <li>
+                  <p>Tempo traveller in Mumbai</p>
+                </li>
+                <li>
+                  <p>Tempo traveller in Hydrabad</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

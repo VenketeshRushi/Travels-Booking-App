@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer className="bg-gray-900">
         <div className="mx-auto w-full container p-4 sm:p-6">
-          <div className="flex justify-evenly md:flex md:justify-between">
+          <div className="flex flex-col-reverse justify-evenly md:justify-between lg:flex-row">
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-white uppercase">
@@ -101,7 +101,7 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="w-1/3 flex items-start flex-col mb-6 md:mb-0">
+            <div className="w-full lg:w-1/3 flex items-start flex-col mb-6">
               <div className="flex items-center">
                 <Image
                   src="/r_logo.png"

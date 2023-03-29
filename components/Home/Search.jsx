@@ -30,7 +30,7 @@ export default function Search() {
       <div className="bg-hero-pattern bg-repeat-round bg-cover w-full h-[24rem] flex items-center justify-center pt-8 relative">
         <div className="grid grid-cols-1 gap-5 lg:divide-x-2  lg:grid-cols-4 lg:gap-0">
           <input
-            className="placeholder-gray-500 capitalize focus:placeholder-gray-500 placeholder:pl-2 h-[46px] w-[200px] font-semibold pl-2 text-color:white  "
+            className="placeholder-gray-500 capitalize focus:placeholder-gray-500 placeholder:pl-2 h-[46px] w-[240px] font-semibold pl-2 text-color:white"
             placeholder="Enter your source"
             type="text"
             name="source"
@@ -38,7 +38,7 @@ export default function Search() {
           />
 
           <input
-            className="placeholder-gray-500 capitalize focus:placeholder-gray-500 placeholder:pl-2 h-[46px] w-[200px] font-semibold pl-2 text-color:white"
+            className="placeholder-gray-500 capitalize focus:placeholder-gray-500 placeholder:pl-2 h-[46px] w-[240px] font-semibold pl-2 text-color:white"
             placeholder="Enter your destination"
             type="text"
             name="destination"
@@ -46,7 +46,7 @@ export default function Search() {
           />
 
           <input
-            className="h-[46px] w-[200px] pl-3 pr-3"
+            className="h-[46px] w-[240px] pl-3 pr-3 transition-all duration-300 ease-linear"
             type="date"
             name="date"
             onChange={handlechange}
@@ -55,7 +55,7 @@ export default function Search() {
           <button
             onClick={handleclicked}
             onKeyDown={handleKeyDown}
-            className="h-[46px] w-[200px] bg-red-500 text-white font-bold"
+            className="h-[46px] w-[240px] bg-red-500 text-white font-bold"
           >
             Search
           </button>

@@ -34,7 +34,7 @@
 @media all and (min-width: 319px) and (max-width: 767px) {
   .offer {
     width: 90%;
-    margin-top: -25px;
+    margin-top: -10px;
   }
   .mainslider {
     justify-content: space-between;
