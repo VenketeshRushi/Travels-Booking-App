@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 mongoose.set('strictQuery', false);
 
 const connectDB = async () => {
-  return mongoose.connect("mongodb+srv://Akash:852654@cluster0.9xzz5v6.mongodb.net/pharma?retryWrites=true&w=majority")
+  return mongoose.connect("mongodb://127.0.0.1:27017/redbus")
 };
 
 export default connectDB;
