@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
-
 export const metadata = {
   title: "Redbus",
   description: "Travels Booking App",

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 import Search from "@/components/Home/Search";
@@ -11,8 +10,8 @@ export default function Home() {
   return (
     <main className="h-screen">
       <Search />
-      <Infocard/>
-      <Footer/>
+      <Infocard />
+      <Footer />
     </main>
   );
 }

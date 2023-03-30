@@ -13,37 +13,19 @@ export default function Footer() {
                 </h2>
                 <ul className="text-gray-600 dark:text-gray-400 font-medium">
                   <li className="mb-1">
-                    <p className="hover:underline">
-                      About Us
-                    </p>
+                    <p className="hover:underline">About Us</p>
                   </li>
                   <li className="mb-1">
-                    <p
-                      className="hover:underline"
-                    >
-                      Contact Us
-                    </p>
+                    <p className="hover:underline">Contact Us</p>
                   </li>
                   <li className="mb-1">
-                    <p
-                      className="hover:underline"
-                    >
-                      Site Map
-                    </p>
+                    <p className="hover:underline">Site Map</p>
                   </li>
                   <li className="mb-1">
-                    <p
-                      className="hover:underline"
-                    >
-                      Careers
-                    </p>
+                    <p className="hover:underline">Careers</p>
                   </li>
                   <li className="mb-1">
-                    <p
-                      className="hover:underline"
-                    >
-                      values
-                    </p>
+                    <p className="hover:underline">values</p>
                   </li>
                 </ul>
               </div>
@@ -137,8 +119,10 @@ export default function Footer() {
               . All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-
-              <a href="https://github.com/VenketeshRushi" className="text-white">
+              <a
+                href="https://github.com/VenketeshRushi"
+                className="text-white"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
@@ -153,7 +137,10 @@ export default function Footer() {
                 </svg>
                 <span className="sr-only">GitHub account</span>
               </a>
-              <a href="https://www.linkedin.com/in/venketesh-rushi-423722236/" className="text-white">
+              <a
+                href="https://www.linkedin.com/in/venketesh-rushi-423722236/"
+                className="text-white"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
@@ -168,7 +155,10 @@ export default function Footer() {
                 </svg>
                 <span className="sr-only">Facebook page</span>
               </a>
-              <a href="https://github.com/VenketeshRushi" className="text-white">
+              <a
+                href="https://github.com/VenketeshRushi"
+                className="text-white"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
@@ -183,7 +173,10 @@ export default function Footer() {
                 </svg>
                 <span className="sr-only">Instagram page</span>
               </a>
-              <a href="https://www.linkedin.com/in/venketesh-rushi-423722236/" className="text-white">
+              <a
+                href="https://www.linkedin.com/in/venketesh-rushi-423722236/"
+                className="text-white"
+              >
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
