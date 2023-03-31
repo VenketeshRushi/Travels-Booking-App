@@ -2,8 +2,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function Signup() {
+  const router = useRouter();
   const initial = {
     email: "",
     password: "",
@@ -28,31 +30,23 @@ export default function Signup() {
       signupcred.password === "" ||
       signupcred.gender === ""
     ) {
-      alert("please fill all the details")
+      alert("please fill all the details");
     } else {
       try {
         let response = await axios.post("/api/signup", signupcred, config);
-        let data = await response.json();
-        console.log(data)
-        //let res = await fetch("/api/signup", {
-        //   method: 'POST',
-        //   headers: {
-        //     'Accept': 'application/json',
-        //     'Content-Type': 'application/json'
-        //   },
-        //   body: JSON.stringify(signupcred)
-        // })
-        // let data = await res.json();
-        // console.log(data)
-        //console.log(response);
-        alert("signup successful")
+        console.log(response);
+        alert("signup successful");
+        router.push("/login");
+        setShowToast(true);
       } catch (error) {
         console.log(error);
       }
     }
   };
+
   return (
     <>
+  
       <div className="lg:flex items-center justify-center ">
         <div className=" mt-0 lg:w-1/3 xl:max-w-screen-sm bg-white pb-5 rounded-xl shadow-2xl drop-shadow-2xl">
           <div className="mt-10 px-8 sm:px-24 md:px-48 lg:px-10 lg:mt-3 xl:px-6 xl:max-w-2xl">
@@ -103,7 +97,10 @@ export default function Signup() {
                   </select>
                 </div>
                 <div className="mt-10">
-                  <button className="bg-red-600 inline-block p-4 font-bold text-md uppercase leading-tight text-white shadow-md transition duration-150 ease-linear hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg tracking-wide w-full rounded-full">
+                  <button
+                    type="submit"
+                    className="bg-red-600 inline-block p-4 font-bold text-md uppercase leading-tight text-white shadow-md transition duration-150 ease-linear hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg tracking-wide w-full rounded-full"
+                  >
                     Sign Up
                   </button>
                 </div>
