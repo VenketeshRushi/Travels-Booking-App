@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
 
 export default function Signup() {
@@ -15,6 +14,13 @@ export default function Signup() {
   function hanldeChange(e) {
     setsignupcred({ ...signupcred, [e.target.name]: e.target.value });
   }
+
+  const config = {
+    headers: {
+      "Content-type": "application/json",
+    },
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (
@@ -22,17 +28,24 @@ export default function Signup() {
       signupcred.password === "" ||
       signupcred.gender === ""
     ) {
-      toast("Toast is good", {
-        hideProgressBar: true,
-        autoClose: 2000,
-        type: "success",
-      });
-      alert("hi")
+      alert("please fill all the details")
     } else {
       try {
-        let response = await axios.post("/api/signup", signupcred);
-        console.log(response);
-        alert("bye")
+        let response = await axios.post("/api/signup", signupcred, config);
+        let data = await response.json();
+        console.log(data)
+        //let res = await fetch("/api/signup", {
+        //   method: 'POST',
+        //   headers: {
+        //     'Accept': 'application/json',
+        //     'Content-Type': 'application/json'
+        //   },
+        //   body: JSON.stringify(signupcred)
+        // })
+        // let data = await res.json();
+        // console.log(data)
+        //console.log(response);
+        alert("signup successful")
       } catch (error) {
         console.log(error);
       }
@@ -108,7 +121,6 @@ export default function Signup() {
           </div>
         </div>
       </div>
-      <ToastContainer autoClose={3000} />
     </>
   );
 }
