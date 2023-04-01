@@ -2,7 +2,6 @@ import connectDB from "../../../middleware/connectDB";
 import User from "../../../models/user.model";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { cookies } from "next/headers";
 
 const HTTP_STATUS = {
   SUCCESS: 200,

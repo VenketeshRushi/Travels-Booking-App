@@ -26,15 +26,13 @@ export default function Login() {
     e.preventDefault();
     if (
       signupcred.email === "" ||
-      signupcred.password === "" ||
-      signupcred.gender === ""
+      signupcred.password === ""
     ) {
-      alert("please fill all the details");
+      alert("please fill all fields")
     } else {
       try {
         let response = await axios.post("/api/login", signupcred, config);
         console.log(response);
-        alert("Login successful");
         router.push("/");
       } catch (error) {
         console.log(error);
@@ -45,7 +43,7 @@ export default function Login() {
     <>
       <div className="lg:flex items-center justify-center">
         <div className="mt-0 lg:w-1/3 xl:max-w-screen-sm bg-white p-5 rounded-xl shadow-2xl drop-shadow-2xl">
-          <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-10 lg:mt-3 xl:px-4 xl:max-w-2xl">
+          <div className="mt-10 px-6 sm:px-24 md:px-48 lg:px-10 lg:mt-3 xl:px-4 xl:max-w-2xl">
             <h2
               className="text-center text-4xl text-gray-800 font-display font-semibold lg:text-left xl:text-5xl
               xl:text-bold"
