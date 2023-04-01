@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 export default function Login() {
   const router = useRouter();
@@ -24,17 +25,20 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (
-      signupcred.email === "" ||
-      signupcred.password === ""
-    ) {
-      alert("please fill all fields")
+    if (signupcred.email === "" || signupcred.password === "") {
+      toast.error("Please fill all fields");
     } else {
       try {
         let response = await axios.post("/api/login", signupcred, config);
         console.log(response);
         router.push("/");
+        if (response.status === 200) {
+          toast.success(response.data.message);
+        } else {
+          toast.error(response.data.message);
+        }
       } catch (error) {
+        toast.error(error.response.data.message);
         console.log(error);
       }
     }

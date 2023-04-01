@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 export default function Signup() {
   const router = useRouter();
@@ -30,15 +31,19 @@ export default function Signup() {
       signupcred.password === "" ||
       signupcred.gender === ""
     ) {
-      alert("please fill all the details");
+      toast.error("Please fill all fields");
     } else {
       try {
         let response = await axios.post("/api/signup", signupcred, config);
         console.log(response);
-        alert("signup successful");
         router.push("/login");
-        setShowToast(true);
+        if (response.status === 200) {
+          toast.success(response.data.message);
+        } else {
+          toast.error(response.data.message);
+        }
       } catch (error) {
+        toast.error(error.response.data.message);
         console.log(error);
       }
     }
@@ -46,7 +51,6 @@ export default function Signup() {
 
   return (
     <>
-  
       <div className="lg:flex items-center justify-center ">
         <div className=" mt-0 lg:w-1/3 xl:max-w-screen-sm bg-white pb-5 rounded-xl shadow-2xl drop-shadow-2xl">
           <div className="mt-10 px-8 sm:px-24 md:px-48 lg:px-10 lg:mt-3 xl:px-6 xl:max-w-2xl">

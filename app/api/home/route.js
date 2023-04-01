@@ -76,8 +76,9 @@ export async function PUT(request) {
       );
     }
 
-    const buses = await Bus.find({ from: source, to: destination });
-    if (!buses.length) {
+    const busses = await Bus.find({ from: source, to: destination });
+    console.log(busses);
+    if (!busses.length) {
       return new Response(
         JSON.stringify({
           status: "error",
@@ -90,8 +91,8 @@ export async function PUT(request) {
     return new Response(
       JSON.stringify({
         status: "success",
-        message: "Buses found successfully",
-        buses: buses,
+        message: "These are buses found for this route",
+        buses: busses,
       }),
       { status: HTTP_STATUS.SUCCESS, headers: CONTENT_TYPE_HEADER }
     );
