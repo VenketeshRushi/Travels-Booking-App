@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 
-const busSchema = new mongoose.Schema({
+const BusSchema = new Schema({
   companyname: String,
   from: String,
   to: String,
@@ -14,4 +14,4 @@ const busSchema = new mongoose.Schema({
   seats: Array,
 });
 
-export default mongoose.models.bus || mongoose.model("bus", busSchema);
+export default model("bus", BusSchema);

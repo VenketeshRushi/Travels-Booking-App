@@ -69,7 +69,7 @@ export default function Search() {
       res = res?.data?.cities ?? [];
       setDataSource(res);
     } catch (err) {
-      toast.error(error.response.data.message);
+      toast.error(err.response.data.message);
       console.log(err);
     }
   };
@@ -88,7 +88,7 @@ export default function Search() {
       res = res?.data?.cities ?? [];
       setDataDestination(res);
     } catch (err) {
-      toast.error(error.response.data.message);
+      toast.error(err.response.data.message);
       console.log(err);
     }
   };
@@ -156,14 +156,17 @@ export default function Search() {
   async function getcityinfo(source, destination, date) {
     console.log(source, destination, date);
     try {
-      let res = await axios.put("/api/home", {
+      let res = await axios.put("/api/bus", {
         source,
         destination,
         date,
       });
-      if (res.data.status === 200) {
+      console.log(res);
+      if (res.status === 200) {
+        console.log("hi");
+        console.log(router);
         router.push({
-          pathname: "/selectbus",
+          href: "/selectbus",
           query: { from: source, to: destination, date: date },
         });
         toast.success(res.data.message);
