@@ -126,8 +126,6 @@ export default function Search() {
       return;
     }
     let { source, destination, date } = searchInfo;
-    // source = source.toUpperCase();
-    // destination = destination.toUpperCase();
     getcityinfo(source, destination, date);
   }
 
@@ -147,8 +145,6 @@ export default function Search() {
         return;
       }
       let { source, destination, date } = searchInfo;
-      // source = source.toUpperCase();
-      // destination = destination.toUpperCase();
       getcityinfo(source, destination, date);
     }
   };
@@ -156,27 +152,24 @@ export default function Search() {
   async function getcityinfo(source, destination, date) {
     console.log(source, destination, date);
     try {
-      let res = await axios.put("/api/bus", {
+      let res = await axios.put("/api/home", {
         source,
         destination,
         date,
-      });
-      console.log(res);
+      }, config);
+      console.log("res", res);
       if (res.status === 200) {
-        console.log("hi");
-        console.log(router);
-        router.push({
-          href: "/selectbus",
-          query: { from: source, to: destination, date: date },
-        });
         toast.success(res.data.message);
+        console.log(router);
+        router.push("/selectbus");
       } else {
         setSearchInfo(initState);
         toast.error(res.data.message);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
-      console.log(error);
+      console.log("error", error);
+      toast.error("Something went wrong!");
+
     }
   }
 
@@ -260,8 +253,8 @@ export default function Search() {
               onKeyDown={handleKeyDown1}
             />
             {searchInfo.destination !== "" &&
-            showDropdown1 &&
-            dataDestination.length > 0 ? (
+              showDropdown1 &&
+              dataDestination.length > 0 ? (
               <div className="z-10 bg-gray-900 rounded-lg shadow dark:bg-gray-700 absolute w-max">
                 <ul
                   className="text-sm text-red-700 dark:text-gray-200 mb-1"

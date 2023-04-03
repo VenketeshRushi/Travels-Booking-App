@@ -1,6 +1,6 @@
-import City from "../../../models/city.model.js";
+import cityModel from "../../../models/city.model.js";
 import connectDB from "../../../middleware/connectDB";
-import Bus from "../../../models/bus.model.js";
+import busModel from "../../../models/bus.model.js";
 
 const HTTP_STATUS = {
   SUCCESS: 200,
@@ -17,7 +17,7 @@ export async function POST(request) {
     const { destination, source } = await request.json();
     const searchTerm = destination || source;
 
-    const cities = await City.find({
+    const cities = await cityModel.find({
       name: { $regex: new RegExp(searchTerm, "i") },
     });
 
@@ -52,12 +52,13 @@ export async function POST(request) {
 }
 
 export async function PUT(request) {
+  console.log("hi")
   try {
     await connectDB();
 
     const { destination, source } = await request.json();
 
-    const [fromCity, toCity] = await City.find({
+    const [fromCity, toCity] = await cityModel.find({
       name: { $in: [source, destination] },
     });
 
@@ -81,7 +82,7 @@ export async function PUT(request) {
       );
     }
 
-    const buses = await Bus.find({ from: source, to: destination });
+    const buses = await busModel.find({ from: source, to: destination });
     console.log(buses);
 
     if (buses.length <= 0) {
