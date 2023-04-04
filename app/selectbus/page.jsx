@@ -32,14 +32,14 @@ export default function Selectbus() {
     <>
       <div className="w-full flex items-start justify-between">
         <div className="border-1 w-1/5 flex flex-col bg-slate-100border border-neutral-400 rounded-xl shadow-3xl drop-shadow-2xl pb-3">
-          <h1 className="pl-2 mt-2 mb-2 text-lg font-medium text-gray-900 border-y-2 border-x-2 rounded border-gray-200 pb-1 pt-1">
+          <h1 className="pl-2 mt-2 mb-2 text-lg font-bold text-gray-900 border-y-2 border-x-2 rounded border-gray-200 pb-1 pt-1">
             FILTERS
           </h1>
           <h1 className="ml-2 mt-1 mb-1 border-b-2 border-gray-400 text-lg font-medium text-gray-900">
             BUS TYPES
           </h1>
           <div className="relative flex items-center justify-between overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               Seater
             </span>
             <div className="flex">
@@ -60,7 +60,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               Sleeper
             </span>
             <div className="flex">
@@ -81,7 +81,9 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">Ac</span>
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
+              Ac
+            </span>
             <div className="flex">
               <label class="inline-flex relative items-center mr-5 cursor-pointer">
                 <input
@@ -100,7 +102,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               Non-Ac
             </span>
             <div className="flex">
@@ -124,7 +126,7 @@ export default function Selectbus() {
             DEPARTURE TIME
           </h1>
           <div className="relative flex items-center justify-between overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               Before 6 am
             </span>
             <div className="flex">
@@ -145,7 +147,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               6 am to 12 pm
             </span>
             <div className="flex">
@@ -166,7 +168,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               12pm to 6 pm
             </span>
             <div className="flex">
@@ -187,7 +189,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               After 6 pm
             </span>
             <div className="flex">
@@ -212,7 +214,7 @@ export default function Selectbus() {
             ARRIVAL TIME
           </h1>
           <div className="relative flex items-center justify-between overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               Before 6 am
             </span>
             <div className="flex">
@@ -233,7 +235,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               6 am to 12 pm
             </span>
             <div className="flex">
@@ -254,7 +256,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               12pm to 6 pm
             </span>
             <div className="flex">
@@ -275,7 +277,7 @@ export default function Selectbus() {
             </div>
           </div>
           <div className="relative flex items-center justify-between  overflow-hidden">
-            <span className="ml-2 text-lg font-medium text-gray-900">
+            <span className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
               After 6 pm
             </span>
             <div className="flex">
@@ -297,7 +299,9 @@ export default function Selectbus() {
           </div>
         </div>
         <div className="border-2 border-black w-3/4">
-          <h1 className="ml-2 text-lg font-medium text-gray-900">Busses will be shown here</h1>
+          <h1 className="ml-2 text-lg font-medium text-gray-700 hover:text-gray-900">
+            Busses will be shown here
+          </h1>
         </div>
       </div>
     </>
