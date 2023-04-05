@@ -5,6 +5,8 @@ import axios from "axios";
 import styles from "../../app/page.module.css";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { saveData } from "@/Redux/bus/bus.action";
 
 export default function Search() {
   const initState = {
@@ -17,6 +19,7 @@ export default function Search() {
   const [dataDestination, setDataDestination] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false); // Track if dropdown should be shown of source
   const [showDropdown1, setShowDropdown1] = useState(false);
+  const dispatch = useDispatch();
 
   const router = useRouter();
 
@@ -158,9 +161,10 @@ export default function Search() {
         date,
       }, config);
       console.log("res", res);
+      let busData = res.data.buses
       if (res.status === 200) {
         toast.success(res.data.message);
-        console.log(router);
+        dispatch(saveData(busData))
         router.push("/selectbus");
       } else {
         setSearchInfo(initState);
